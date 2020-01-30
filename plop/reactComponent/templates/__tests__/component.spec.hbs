@@ -1,0 +1,16 @@
+import React from 'react';
+
+import { makeContextRenderer } from '{{ testUtilsPath }}';
+import { {{ pascalCase name }}Component as {{ pascalCase name }}, {{ pascalCase name }}ComponentProps } from '../{{ camelCase name }}.component';
+
+describe('{{ pascalCase name }}: Component', () => {
+  const defaultProps: {{ pascalCase name }}ComponentProps = {};
+
+  const component = (props: Partial<{{ pascalCase name }}ComponentProps>) => <{{ pascalCase name }} {...defaultProps} {...props} />;
+  const render = makeContextRenderer(component);
+
+  it('should render correctly', () => {
+    const { container } = render();
+    expect(container).toMatchSnapshot();
+  });
+});

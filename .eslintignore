@@ -1,0 +1,6 @@
+scripts/*
+config/*
+plop/*
+build/*
+plopfile.js
+setupTests.js
